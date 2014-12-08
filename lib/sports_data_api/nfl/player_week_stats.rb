@@ -31,10 +31,10 @@ module SportsDataApi
                         :name => player['name'],
                         :position => player['position'],
                         :team => team['name'],
-                        :rush_att => player['att'],
-                        :rush_yds => player['yds'],
-                        :rush_td => player['td'],
-                        :fum_lost => player['fum']
+                        :rush_att => player['att'].to_i,
+                        :rush_yds => player['yds'].to_i,
+                        :rush_td => player['td'].to_i,
+                        :fum_lost => player['fum'].to_i
                       }
 
                       rushing << rushing_stats
@@ -47,11 +47,11 @@ module SportsDataApi
                         :name => player['name'],
                         :position => player['position'],
                         :team => team['name'],
-                        :rec_tgt => player['tar'],
-                        :receptions => player['rec'],
-                        :rec_yds => player['yds'],
-                        :rec_td => player['td'],
-                        :fum_lost => player['fum']
+                        :rec_tgt => player['tar'].to_i,
+                        :receptions => player['rec'].to_i,
+                        :rec_yds => player['yds'].to_i,
+                        :rec_td => player['td'].to_i,
+                        :fum_lost => player['fum'].to_i
                       }
 
                       receiving << receiving_stats
@@ -64,11 +64,11 @@ module SportsDataApi
                         :name => player['name'],
                         :position => player['position'],
                         :team => team['name'],
-                        :pass_att => player['att'],
-                        :pass_comp => player['cmp'],
-                        :pass_yds => player['yds'],
-                        :pass_td => player['td'],
-                        :pass_int => player['int']
+                        :pass_att => player['att'].to_i,
+                        :pass_comp => player['cmp'].to_i,
+                        :pass_yds => player['yds'].to_i,
+                        :pass_td => player['td'].to_i,
+                        :pass_int => player['int'].to_i
                       }
 
                       passing << passing_stats
